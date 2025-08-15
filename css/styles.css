@@ -1,0 +1,32 @@
+body {
+  background: linear-gradient(to right, #e3f2fd, #f1f8e9);
+}
+
+.custom-card {
+  border: 2px solid #2196f3;
+  transition: transform 0.2s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: scale(1.02);
+}
+
+.custom-title {
+  font-weight: bold;
+  color: #1565c0;
+  letter-spacing: 1px;
+}
+
+.custom-btn {
+  background-color: #1565c0;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: #0d47a1;
+}
+
+#intereses, #saldo, #saldototal {
+  font-size: 1.1rem;
+}

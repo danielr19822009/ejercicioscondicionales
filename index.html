@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Social</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Hoja de estilos personalizada -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- navbar.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary custom-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Mis Ejercicios</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Banco Social</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/public/ejercicio2.html">Ejercicio 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/public/ejercicio3.html">Ejercicio 3</a>
+                </li>
+                   <li class="nav-item">
+                    <a class="nav-link active" href="/public/ejercicio4.html">Ejercicio 4</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+
+        <div class="card shadow-lg border-0 rounded-4 custom-card">
+          <div class="card-body p-4">
+            <h1 class="text-center custom-title mb-4">Banco Social</h1>
+
+            <p class="mb-4">
+              <strong>Ejercicio:</strong> Suponga que un individuo desea invertir su capital en un banco y desea saber cuánto dinero ganará después de un mes si el banco paga a razón de <strong>2% mensual</strong>.
+            </p>
+
+            <div class="mb-3">
+              <input id="input_monto" type="number" class="form-control" placeholder="Ingrese Monto de Inversión">
+            </div>
+
+            <div class="mb-3">
+              <input id="input_plazo" type="number" class="form-control" placeholder="Plazo en meses">
+            </div>
+
+            <div class="mb-3">
+              <input id="input_interes" type="number" class="form-control" placeholder="% Interés del banco">
+            </div>
+
+            <div class="d-grid">
+              <button type="button" class="btn btn-primary btn-lg custom-btn" onclick="calcularRentabilidad()">
+                Calcular Rentabilidad
+              </button>
+            </div>
+
+            <hr class="my-4">
+
+            <div id="intereses" class="fw-bold text-success"></div>
+            <div id="saldo" class="fw-bold text-info"></div>
+            <div id="saldototal" class="fw-bold text-danger"></div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/script.js"></script>
+
+  <!-- Script para cargar el navbar -->
+  <script>
+    fetch("public/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
